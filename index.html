@@ -73,40 +73,6 @@
         <div class="hero__glow hero__glow--2"></div>
       </div>
 
-      <!-- Scanner as atmospheric ghost — not a layout column -->
-      <div class="hero__ghost" aria-hidden="true">
-        <div class="scanner">
-          <div class="scanner__sweep"></div>
-          <div class="scanner__ring scanner__ring--1"></div>
-          <div class="scanner__ring scanner__ring--2"></div>
-          <div class="scanner__ring scanner__ring--3"></div>
-          <div class="scanner__cross"></div>
-          <svg class="scanner__net" viewBox="0 0 320 320">
-            <g class="scanner__links">
-              <line x1="160" y1="160" x2="64" y2="86"/>
-              <line x1="160" y1="160" x2="258" y2="104"/>
-              <line x1="160" y1="160" x2="234" y2="252"/>
-              <line x1="160" y1="160" x2="80" y2="232"/>
-            </g>
-            <g class="scanner__nodes">
-              <circle cx="64" cy="86" r="7"/>
-              <circle cx="258" cy="104" r="7"/>
-              <circle cx="234" cy="252" r="7"/>
-              <circle cx="80" cy="232" r="7"/>
-            </g>
-          </svg>
-          <div class="scanner__core">
-            <svg viewBox="0 0 512 512" class="molecule">
-              <g transform="rotate(-45 256 256)">
-                <rect x="163" y="211" width="186" height="90" rx="45"/>
-                <circle cx="163" cy="256" r="97"/>
-                <circle cx="349" cy="256" r="97"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-      </div>
-
       <div class="container hero__inner">
         <div class="hero__content reveal">
           <p class="eyebrow eyebrow--light">
@@ -124,9 +90,43 @@
             <a class="btn btn--ghost" href="#what-we-do" data-i18n="hero.cta2">What we do</a>
           </div>
         </div>
+
+        <!-- Scanner: columna dreta en desktop, ocult en mobile -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="scanner">
+            <div class="scanner__sweep"></div>
+            <div class="scanner__ring scanner__ring--1"></div>
+            <div class="scanner__ring scanner__ring--2"></div>
+            <div class="scanner__ring scanner__ring--3"></div>
+            <div class="scanner__cross"></div>
+            <svg class="scanner__net" viewBox="0 0 320 320">
+              <g class="scanner__links">
+                <line x1="160" y1="160" x2="64" y2="86"/>
+                <line x1="160" y1="160" x2="258" y2="104"/>
+                <line x1="160" y1="160" x2="234" y2="252"/>
+                <line x1="160" y1="160" x2="80" y2="232"/>
+              </g>
+              <g class="scanner__nodes">
+                <circle cx="64" cy="86" r="7"/>
+                <circle cx="258" cy="104" r="7"/>
+                <circle cx="234" cy="252" r="7"/>
+                <circle cx="80" cy="232" r="7"/>
+              </g>
+            </svg>
+            <div class="scanner__core">
+              <svg viewBox="0 0 512 512" class="molecule">
+                <g transform="rotate(-45 256 256)">
+                  <rect x="163" y="211" width="186" height="90" rx="45"/>
+                  <circle cx="163" cy="256" r="97"/>
+                  <circle cx="349" cy="256" r="97"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Capability strip — replaces floating chips -->
+      <!-- Capability strip -->
       <div class="hero__strip">
         <div class="container">
           <ul class="hero__caps">
