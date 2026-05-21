@@ -504,14 +504,13 @@ section[id], [id].hero { scroll-margin-top: 90px; }
 .step:nth-child(4) .step__title { color: var(--text-1); }
 
 /* ============================================================
-   CONTACT — two-column poster layout
+   CONTACT
    ============================================================ */
 .contact {
   position: relative; isolation: isolate; overflow: hidden;
-  padding: 140px 0; background: var(--bg); color: var(--text-1);
+  padding: 120px 0; background: var(--bg); color: var(--text-1); text-align: center;
 }
 
-/* Precision horizon at top */
 .contact::before {
   content: ""; position: absolute; left: 50%; top: 0;
   transform: translateX(-50%); width: 400px; height: 1px;
@@ -530,51 +529,24 @@ section[id], [id].hero { scroll-margin-top: 90px; }
   background: radial-gradient(circle, oklch(83% 0.155 196 / 0.10), transparent 58%);
 }
 
-/* Two-column layout */
-.contact__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-  max-width: none;
-}
-
-.contact__left { max-width: 560px; }
+.contact__inner { max-width: 640px; }
+.contact .eyebrow { justify-content: center; }
 
 .contact__title {
-  font-size: clamp(2.2rem, 1.5rem + 3.0vw, 3.8rem);
-  margin: 16px 0 20px; line-height: 1.08; letter-spacing: -0.03em;
+  font-size: clamp(2.0rem, 1.4rem + 2.6vw, 3.2rem);
+  margin: 16px 0 20px; line-height: 1.10; letter-spacing: -0.025em;
 }
-.contact__text { color: var(--text-2); font-size: 1.07rem; line-height: 1.72; }
-
-.contact__actions { margin-top: 36px; display: flex; flex-direction: column; gap: 20px; }
+.contact__text { color: var(--text-2); font-size: 1.07rem; line-height: 1.72; margin-bottom: 36px; }
 
 .contact__meta {
-  display: flex; flex-wrap: wrap; gap: 12px 24px;
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 32px; margin-top: 32px;
 }
-.contact__meta li { display: flex; align-items: center; gap: 8px; color: var(--text-3); font-size: 0.92rem; }
+.contact__meta li { display: flex; align-items: center; gap: 8px; color: var(--text-2); font-size: 0.94rem; }
 .contact__meta svg {
-  width: 15px; height: 15px; fill: none; stroke: var(--electric-mid);
+  width: 17px; height: 17px; fill: none; stroke: var(--electric-mid);
   stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
 }
-
-/* Right side: email in large display */
-.contact__right {
-  display: flex; align-items: center; justify-content: flex-end;
-}
-.contact__email-display {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3.5vw, 3.2rem);
-  font-weight: 800;
-  color: var(--electric);
-  letter-spacing: -0.03em;
-  word-break: break-all;
-  text-align: right;
-  line-height: 1.15;
-  text-shadow: 0 0 50px oklch(83% 0.155 196 / 0.20);
-  transition: opacity 0.2s var(--ease);
-}
-.contact__email-display:hover { opacity: 0.75; }
+.contact__meta a:hover { color: var(--electric); }
 
 /* ============================================================
    FOOTER
@@ -651,11 +623,6 @@ section[id], [id].hero { scroll-margin-top: 90px; }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 1100px) {
-  .contact__inner { gap: 52px; }
-  .contact__email-display { font-size: clamp(1.4rem, 3vw, 2.6rem); }
-}
-
 @media (max-width: 960px) {
   /* Hero */
   .hero__ghost { display: none; }
@@ -665,12 +632,6 @@ section[id], [id].hero { scroll-margin-top: 90px; }
   .bento-item { grid-column: span 1; }
   .bento-item--main { grid-column: span 2; }
   .bento-item--accent { grid-column: span 2; }
-
-  /* Contact */
-  .contact__inner { grid-template-columns: 1fr; gap: 48px; }
-  .contact__right { justify-content: flex-start; }
-  .contact__email-display { text-align: left; }
-  .contact__left { max-width: none; }
 
   /* Footer */
   .footer__inner { grid-template-columns: 1fr 1fr; }
@@ -726,8 +687,6 @@ section[id], [id].hero { scroll-margin-top: 90px; }
   .footer__bottom { flex-direction: column; align-items: flex-start; }
   .btn { width: 100%; }
   .hero__actions { width: 100%; }
-
-  .contact__email-display { font-size: clamp(1.3rem, 6vw, 2rem); }
 }
 
 /* ---- reduced motion ---- */
