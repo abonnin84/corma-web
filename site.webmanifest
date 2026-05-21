@@ -1,0 +1,14 @@
+{
+  "name": "CORMA — Medical AInnovation",
+  "short_name": "CORMA",
+  "description": "Artificial intelligence applications for healthcare that improve medical diagnosis and optimize clinical workflows.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0C353B",
+  "theme_color": "#0E3A40",
+  "icons": [
+    { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/img/favicon.svg", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
