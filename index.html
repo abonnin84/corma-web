@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0E3A40" />
+  <meta name="theme-color" content="#080C0F" />
   <title data-i18n="meta.title">CORMA — AI at the service of medical diagnosis</title>
   <meta name="description" data-i18n="meta.desc" content="CORMA develops artificial intelligence applications for healthcare to improve medical diagnosis and optimize clinical workflows." />
   <meta name="author" content="CORMA Medical AInnovation" />
@@ -38,7 +38,7 @@
   <header class="site-header" id="top">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="CORMA — home">
-        <img class="brand__logo" src="assets/img/corma-logo.png" alt="CORMA" width="150" height="42" />
+        <img class="brand__logo" src="assets/img/corma-logo-white.png" alt="CORMA" width="150" height="42" />
         <span class="brand__tag" data-i18n="brand.tag">Medical AInnovation</span>
       </a>
 
@@ -73,6 +73,40 @@
         <div class="hero__glow hero__glow--2"></div>
       </div>
 
+      <!-- Scanner as atmospheric ghost — not a layout column -->
+      <div class="hero__ghost" aria-hidden="true">
+        <div class="scanner">
+          <div class="scanner__sweep"></div>
+          <div class="scanner__ring scanner__ring--1"></div>
+          <div class="scanner__ring scanner__ring--2"></div>
+          <div class="scanner__ring scanner__ring--3"></div>
+          <div class="scanner__cross"></div>
+          <svg class="scanner__net" viewBox="0 0 320 320">
+            <g class="scanner__links">
+              <line x1="160" y1="160" x2="64" y2="86"/>
+              <line x1="160" y1="160" x2="258" y2="104"/>
+              <line x1="160" y1="160" x2="234" y2="252"/>
+              <line x1="160" y1="160" x2="80" y2="232"/>
+            </g>
+            <g class="scanner__nodes">
+              <circle cx="64" cy="86" r="7"/>
+              <circle cx="258" cy="104" r="7"/>
+              <circle cx="234" cy="252" r="7"/>
+              <circle cx="80" cy="232" r="7"/>
+            </g>
+          </svg>
+          <div class="scanner__core">
+            <svg viewBox="0 0 512 512" class="molecule">
+              <g transform="rotate(-45 256 256)">
+                <rect x="163" y="211" width="186" height="90" rx="45"/>
+                <circle cx="163" cy="256" r="97"/>
+                <circle cx="349" cy="256" r="97"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+
       <div class="container hero__inner">
         <div class="hero__content reveal">
           <p class="eyebrow eyebrow--light">
@@ -90,55 +124,30 @@
             <a class="btn btn--ghost" href="#what-we-do" data-i18n="hero.cta2">What we do</a>
           </div>
         </div>
+      </div>
 
-        <div class="hero__visual reveal" aria-hidden="true">
-          <div class="scanner">
-            <div class="scanner__sweep"></div>
-            <div class="scanner__ring scanner__ring--1"></div>
-            <div class="scanner__ring scanner__ring--2"></div>
-            <div class="scanner__ring scanner__ring--3"></div>
-            <div class="scanner__cross"></div>
-            <svg class="scanner__net" viewBox="0 0 320 320">
-              <g class="scanner__links">
-                <line x1="160" y1="160" x2="64" y2="86"/>
-                <line x1="160" y1="160" x2="258" y2="104"/>
-                <line x1="160" y1="160" x2="234" y2="252"/>
-                <line x1="160" y1="160" x2="80" y2="232"/>
-              </g>
-              <g class="scanner__nodes">
-                <circle cx="64" cy="86" r="7"/>
-                <circle cx="258" cy="104" r="7"/>
-                <circle cx="234" cy="252" r="7"/>
-                <circle cx="80" cy="232" r="7"/>
-              </g>
-            </svg>
-            <div class="scanner__core">
-              <svg viewBox="0 0 512 512" class="molecule">
-                <g transform="rotate(-45 256 256)">
-                  <rect x="163" y="211" width="186" height="90" rx="45"/>
-                  <circle cx="163" cy="256" r="97"/>
-                  <circle cx="349" cy="256" r="97"/>
-                </g>
-              </svg>
-            </div>
-          </div>
-          <div class="chip chip--1">
-            <svg viewBox="0 0 24 24" class="chip__icon"><path d="M3 5h13v9H3z"/><path d="M7 9l3 3 4-5 5 7"/></svg>
-            <span data-i18n="hero.chip1">Medical imaging</span>
-          </div>
-          <div class="chip chip--2">
-            <svg viewBox="0 0 24 24" class="chip__icon"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8 11l8-4M8 13l8 4"/></svg>
-            <span data-i18n="hero.chip2">AI models</span>
-          </div>
-          <div class="chip chip--3">
-            <svg viewBox="0 0 24 24" class="chip__icon"><path d="M5 4h14v6H5z"/><path d="M9 14h6v6H9z"/><path d="M12 10v4"/></svg>
-            <span data-i18n="hero.chip3">Clinical integration</span>
-          </div>
+      <!-- Capability strip — replaces floating chips -->
+      <div class="hero__strip">
+        <div class="container">
+          <ul class="hero__caps">
+            <li class="hero__cap">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h13v9H3z"/><path d="M7 9l3 3 4-5 5 7"/></svg>
+              <span data-i18n="hero.chip1">Medical imaging</span>
+            </li>
+            <li class="hero__cap">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8 11l8-4M8 13l8 4"/></svg>
+              <span data-i18n="hero.chip2">AI models</span>
+            </li>
+            <li class="hero__cap">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v6H5z"/><path d="M9 14h6v6H9z"/><path d="M12 10v4"/></svg>
+              <span data-i18n="hero.chip3">Clinical integration</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ░░ WHAT WE DO ░░ -->
+    <!-- ░░ WHAT WE DO — bento grid ░░ -->
     <section class="section" id="what-we-do" aria-labelledby="wwd-title">
       <div class="container">
         <header class="section__head reveal">
@@ -149,30 +158,35 @@
           </p>
         </header>
 
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card__icon">
+        <div class="bento">
+          <article class="bento-item bento-item--main reveal">
+            <div class="bento-item__icon">
               <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.8"/><path d="M5 5.5v6c0 1.55 3.13 2.8 7 2.8s7-1.25 7-2.8v-6"/><path d="M5 11.5v6c0 1.55 3.13 2.8 7 2.8s7-1.25 7-2.8v-6"/></svg>
             </div>
-            <h3 class="card__title" data-i18n="card1.title">Medical image analysis with feedback</h3>
-            <p class="card__text" data-i18n="card1.text">We obtain, label and validate medical image datasets to better understand pathologies.</p>
+            <h3 class="bento-item__title" data-i18n="card1.title">Medical image analysis with feedback</h3>
+            <p class="bento-item__text" data-i18n="card1.text">We obtain, label and validate medical image datasets to better understand pathologies.</p>
           </article>
 
-          <article class="card reveal">
-            <div class="card__icon">
+          <article class="bento-item reveal">
+            <div class="bento-item__icon">
               <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="12" r="2.5"/><circle cx="12" cy="4" r="1.6"/><circle cx="12" cy="20" r="1.6"/><path d="M8.3 7l7.4 3.6M8.3 17l7.4-3.6M7.4 7.6l3.4-2.5M7.4 16.4l3.4 2.5"/></svg>
             </div>
-            <h3 class="card__title" data-i18n="card2.title">AI model development</h3>
-            <p class="card__text" data-i18n="card2.text">We create and train machine learning algorithms that exceed medical standards.</p>
+            <h3 class="bento-item__title" data-i18n="card2.title">AI model development</h3>
+            <p class="bento-item__text" data-i18n="card2.text">We create and train machine learning algorithms that exceed medical standards.</p>
           </article>
 
-          <article class="card reveal">
-            <div class="card__icon">
+          <article class="bento-item reveal">
+            <div class="bento-item__icon">
               <svg viewBox="0 0 24 24"><rect x="8.5" y="3" width="7" height="6" rx="1.5"/><rect x="3" y="15" width="7" height="6" rx="1.5"/><rect x="14" y="15" width="7" height="6" rx="1.5"/><path d="M12 9v3M6.5 15v-3h11v3"/></svg>
             </div>
-            <h3 class="card__title" data-i18n="card3.title">Integration in clinical environments</h3>
-            <p class="card__text" data-i18n="card3.text">We implement AI tools in hospital systems, preparing decision support.</p>
+            <h3 class="bento-item__title" data-i18n="card3.title">Integration in clinical environments</h3>
+            <p class="bento-item__text" data-i18n="card3.text">We implement AI tools in hospital systems, preparing decision support.</p>
           </article>
+
+          <div class="bento-item bento-item--accent reveal">
+            <span class="bento-accent__bg" aria-hidden="true">AI</span>
+            <p class="bento-accent__text" data-i18n="bento.precision">Clinically validated precision</p>
+          </div>
         </div>
       </div>
     </section>
@@ -189,25 +203,25 @@
         </header>
 
         <ol class="steps">
-          <li class="step reveal">
+          <li class="step reveal" data-step="01">
             <span class="step__index">01</span>
             <div class="step__body">
               <h3 class="step__title" data-i18n="step1">Clinical challenge identification</h3>
             </div>
           </li>
-          <li class="step reveal">
+          <li class="step reveal" data-step="02">
             <span class="step__index">02</span>
             <div class="step__body">
               <h3 class="step__title" data-i18n="step2">AI model development</h3>
             </div>
           </li>
-          <li class="step reveal">
+          <li class="step reveal" data-step="03">
             <span class="step__index">03</span>
             <div class="step__body">
               <h3 class="step__title" data-i18n="step3">Productization and integration</h3>
             </div>
           </li>
-          <li class="step reveal">
+          <li class="step reveal" data-step="04">
             <span class="step__index">04</span>
             <div class="step__body">
               <h3 class="step__title" data-i18n="step4">Implementation and impact</h3>
@@ -217,29 +231,33 @@
       </div>
     </section>
 
-    <!-- ░░ CONTACT ░░ -->
+    <!-- ░░ CONTACT — two-column poster layout ░░ -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="contact__bg" aria-hidden="true">
         <div class="hero__grid"></div>
         <div class="hero__glow hero__glow--1"></div>
       </div>
       <div class="container contact__inner reveal">
-        <p class="eyebrow eyebrow--light"><span class="eyebrow__num">03</span><span data-i18n="contact.eyebrow">Contact</span></p>
-        <h2 class="contact__title" id="contact-title" data-i18n="contact.title">Let's talk about your clinical challenge</h2>
-        <p class="contact__text" data-i18n="contact.text">
-          Tell us about the diagnostic challenge you want to solve and we will explore together how artificial intelligence can help.
-        </p>
-        <a class="btn btn--primary btn--lg" href="mailto:abonnin@cormavision.com" data-i18n="contact.cta">Write to us</a>
-        <ul class="contact__meta">
-          <li>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
-            <a href="mailto:abonnin@cormavision.com">abonnin@cormavision.com</a>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
-            <span data-i18n="contact.location">Balearic Islands, Spain</span>
-          </li>
-        </ul>
+        <div class="contact__left">
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__num">03</span><span data-i18n="contact.eyebrow">Contact</span></p>
+          <h2 class="contact__title" id="contact-title" data-i18n="contact.title">Let's talk about your clinical challenge</h2>
+          <p class="contact__text" data-i18n="contact.text">
+            Tell us about the diagnostic challenge you want to solve and we will explore together how artificial intelligence can help.
+          </p>
+          <div class="contact__actions">
+            <a class="btn btn--primary btn--lg" href="mailto:info@corma.ai" data-i18n="contact.cta">Write to us</a>
+            <ul class="contact__meta">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                <span data-i18n="contact.location">Balearic Islands, Spain</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact__right" aria-hidden="true">
+          <a href="mailto:info@corma.ai" class="contact__email-display" tabindex="-1">info@corma.ai</a>
+        </div>
       </div>
     </section>
   </main>
@@ -264,12 +282,10 @@
 
       <div class="footer__contact">
         <h4 data-i18n="footer.contacttitle">Get in touch</h4>
-        <a href="mailto:abonnin@cormavision.com">abonnin@cormavision.com</a>
+        <a href="mailto:info@corma.ai">info@corma.ai</a>
         <p data-i18n="footer.company">CORMA Medical AInnovation</p>
         <div class="footer__partner">
-          <span class="footer__partner-mark">
-            <img src="assets/img/bioib-logo.webp" alt="BIOIB — Cluster Biotecnològic i Biomèdic de les Illes Balears" width="85" height="48" />
-          </span>
+          <span class="footer__partner-mark" aria-hidden="true">BIO<strong>IB</strong></span>
           <p data-i18n="footer.partner">CORMA Medical AInnovation within the Balearic Islands Health Research and Biomedical Institute.</p>
         </div>
       </div>
